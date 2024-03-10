@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skl {
+  position: relative;
+}
+.skl::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #06b6d4;
+  border-right: 2px solid #06b6d4;
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
